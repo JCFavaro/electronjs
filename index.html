@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Postman Simulator</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #ff6f00;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button[type="submit"] {
+      background-color: #ff6f00;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #ff8124;
+    }
+
+    #response {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Postman Simulator</h1>
+  <div class="container">
+    <form id="requestForm">
+      <div class="form-group">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" placeholder="Enter URL" required>
+      </div>
+      <div class="form-group">
+        <label for="method">Method:</label>
+        <select id="method" name="method">
+          <option value="GET">GET</option>
+          <option value="POST">POST</option>
+          <option value="PUT">PUT</option>
+          <option value="DELETE">DELETE</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" placeholder="Enter request body"></textarea>
+      </div>
+      <button type="submit">Send Request</button>
+    </form>
+
+    <div id="response"></div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
+
+

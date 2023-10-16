@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 80px;
+    float: left;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    margin-left: 90px;
+    padding: 20px;
+}
+
+.request h2,
+.response h2 {
+    color: #0078d4;
+}
+
+.request select,
+.request input[type="text"],
+.request button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.request button {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+}
+
+.response pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}

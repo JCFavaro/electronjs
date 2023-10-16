@@ -1,0 +1,28 @@
+Certainly! Let me explain the purpose of each of the three files in the project:
+
+    main.js:
+        This file is the main entry point for your Electron application.
+        It sets up the Electron app, creates a browser window, and loads the index.html file.
+        It also handles the IPC (Inter-Process Communication) communication between the main process and the renderer process.
+        The main process is responsible for managing the application's lifecycle and interacting with the operating system.
+        In this file, we create a window using the BrowserWindow class and load the index.html file using the loadFile method.
+        We also listen for the send-request event from the renderer process and use the axios library to make the HTTP request. 
+        The response is then sent back to the renderer process using the receive-response event.
+
+    index.html:
+        This file is the main HTML file for your Electron application.
+        It contains the structure and content of the user interface.
+        In this file, we have a form with input fields for the URL, method, and request body.
+        When the form is submitted, it triggers an event listener in the renderer process to handle the request.
+        The response from the server is displayed in the response div.
+
+    renderer.js:
+        This file is executed in the renderer process, which is responsible for rendering the user interface.
+        It handles the form submission event and sends the request data to the main process using IPC communication.
+        It also listens for the receive-response event from the main process and updates the UI with the response data.
+        In this file, we use the fetch API to make the HTTP request in the renderer process.
+        When the response is received, it is parsed as JSON and displayed in the response div.
+
+These three files work together to create a simple Electron application that simulates Postman and allows you to make HTTP requests. 
+The main process manages the application's lifecycle and handles the HTTP requests, while the renderer process renders the user interface 
+and communicates with the main process using IPC.
